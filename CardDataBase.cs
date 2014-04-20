@@ -22442,6 +22442,19 @@ CardIdentifier.HOLLOW_TWIN_BLADES__BINARY_STAR
 		                              "LinkJoker053",
 		                              CardIdentifier.STARVADER_FREEZE_RAY_DRAGON
 		                              ));
+									  
+		Card.Add (new CardInformation(1,
+		                              TriggerIcon.NONE,
+		                              SkillIcon.BOOST,
+		                              0,
+		                              "Blue Storm Guardian Dragon, Icefall Dragon",
+		                              "Tear Dragon",
+		                              "Aqua Force",
+		                              1,
+		                              6000,
+		                              "AquaForce088",
+		                              CardIdentifier.BLUE_STORM_GUARDIAN_DRAGON_ICEFALL_DRAGON
+		                              ));
 	}
 	
 	

@@ -110,6 +110,13 @@ public class CardHelpMenu : MonoBehaviour {
 			desc += "[AUTO](RC):[Soul Blast (1)] When this unit boosts a unit with \"Blau\" in its card name, " +
 				    "you may pay the cost. If you do, the boosted unit gets [Power]+6000 until end of that battle.";	
 		}
+		else if(id == CardIdentifier.BLUE_STORM_GUARDIAN_DRAGON_ICEFALL_DRAGON)
+		{
+			desc += "[CONT]: Sentinel (You may only have up to four cards with \"[CONT]: Sentinel\" in a deck)\n\n" + 
+					"[AUTO]:[Counter Blast (1)] When this is placed on (GC) from your hand, if you have a \"Aqua Force\" vanguard," + 
+					" you may pay the cost. If you do, reveal the five cards from the top of your deck, call all \"Aqua Force\" from " + 
+					"among them to (GC) as [Rest], and put the rest into the drop zone.";
+		}
 		else if(id == CardIdentifier.LIBERATOR_STAR_RAIN_TRUMPETER)
 		{
 			desc += "[AUTO]:[Choose a card named \"Blaster Blade Liberator\" from your soul or drop zone, and put it on top of your deck] " + 

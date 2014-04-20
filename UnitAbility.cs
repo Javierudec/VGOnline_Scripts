@@ -178,6 +178,7 @@ public class UnitAbility {
 	public void SetUnitObject(CardIdentifier id)
 	{
 		if(id == CardIdentifier.MARTIAL_ARTS_MUTANT__MASTER_BEETLE)  	   		 	        _UnitObject = new MartialArtsMutanMasterBeetle();
+		else if(id == CardIdentifier.BLUE_STORM_GUARDIAN_DRAGON_ICEFALL_DRAGON)             _UnitObject = new BlueStormGuardianDragonIcefallDragon();
 		else if(id == CardIdentifier.STARVADER_FREEZE_RAY_DRAGON)                           _UnitObject = new StarvaderFreezeRayDragon();
 		else if(id == CardIdentifier.DRAGON_KNIGHT_GIMEL)                                   _UnitObject = new DragonKnightGimel();
 		else if(id == CardIdentifier.DRAGONIC_BURNOUT)                                      _UnitObject = new DragonicBurnout();
