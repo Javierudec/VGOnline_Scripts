@@ -110,6 +110,14 @@ public class CardHelpMenu : MonoBehaviour {
 			desc += "[AUTO](RC):[Soul Blast (1)] When this unit boosts a unit with \"Blau\" in its card name, " +
 				    "you may pay the cost. If you do, the boosted unit gets [Power]+6000 until end of that battle.";	
 		}
+		else if(id == CardIdentifier.MACHINING_SPARK_HERCULES)
+		{
+			desc += "[AUTO](VC) Limit Break 4 (This ability is active if you have four or more damage):[Counter Blast (2)-card with \"Machining\" in its card name]" + 
+				    " When this unit attacks a vanguard, if all of your opponent's vanguard and rear-guards are [Rest], you may pay the cost. If you do, this unit gets" + 
+					" [Power]+10000/[Critical]+1 until end of turn, and choose one of your opponent's rear-guards, and that unit cannot [Stand] during your opponent's next stand phase.\n\n" + 
+					"[ACT](VC):[Soul Blast (1)-card with \"Machining\" in its card name] [Rest] all of your opponent's rear-guards, and this unit gets [Power]+2000 until end of turn.\n\n" +
+					"[CONT](VC/RC): Lord (If you have a unit without a same clan as this unit, this unit cannot attack)";
+		}
 		else if(id == CardIdentifier.BLUE_STORM_GUARDIAN_DRAGON_ICEFALL_DRAGON)
 		{
 			desc += "[CONT]: Sentinel (You may only have up to four cards with \"[CONT]: Sentinel\" in a deck)\n\n" + 

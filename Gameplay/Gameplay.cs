@@ -304,6 +304,11 @@ public class Gameplay : MonoBehaviour {
 		{
 			stateDynamicText.SetText(str1);
 		}
+		else if(_gameAction == GameAction.ENEMY_REST)
+		{
+			Card tmp = field.GetCardAt(Util.TransformToPlayerField((fieldPositions)other1));
+			dummyUnitObject.RestUnit(tmp);
+		}
 		else if(_gameAction == GameAction.LOSE_BY_CARD_EFFECT)
 		{
 			bGameEnded = true;

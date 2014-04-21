@@ -2817,7 +2817,12 @@ public class UnitObject {
 		card.CheckAbilities(CardState.Rest);
 		Game.field.CheckAbilitiesExcept(card.pos, CardState.Rest_NotMe);
 	}
-	
+
+	public void RestEnemyUnit(Card c)
+	{
+		Game.SendPacket(GameAction.ENEMY_REST, c.pos);
+	}
+
 	public void IncreasePowerAndCriticalByTurn(Card card, int power, int critical)
 	{
 		card.IncreasePowerUntilEndTurn(power);

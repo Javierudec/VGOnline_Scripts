@@ -22455,6 +22455,19 @@ CardIdentifier.HOLLOW_TWIN_BLADES__BINARY_STAR
 		                              "AquaForce088",
 		                              CardIdentifier.BLUE_STORM_GUARDIAN_DRAGON_ICEFALL_DRAGON
 		                              ));
+									  
+		Card.Add (new CardInformation(3,
+		                              TriggerIcon.NONE,
+		                              SkillIcon.TWIN_DRIVE,
+		                              0,
+		                              "Machining Spark Hercules",
+		                              "Insect",
+		                              "Megacolony",
+		                              1,
+		                              11000,
+		                              "Megacolony041",
+		                              CardIdentifier.MACHINING_SPARK_HERCULES
+		                              ));
 	}
 	
 	
@@ -22463,6 +22476,7 @@ private void AddSpecialConditions (Card _card, CardIdentifier id)
 		//Limit Break 4
 		if(id == CardIdentifier.SHURA_STEALTH_DRAGON__KUJIKIRICONGO 
 		   || id == CardIdentifier.STRONGEST_BEAST_DEITY__ETHICS_BUSTER_EXTREME 
+		   || id == CardIdentifier.MACHINING_SPARK_HERCULES
 		   || id == CardIdentifier.DEADLIEST_BEAST_DEITY__ETHICS_BUSTER______REVERSE_____ 
 		   || id == CardIdentifier.DARK_DIMENSIONAL_ROBO_______REVERSE______DAIYUSHA 
 		   || id == CardIdentifier.ORIGINAL_SAVER__ZERO
@@ -22505,6 +22519,7 @@ private void AddSpecialConditions (Card _card, CardIdentifier id)
 
 		//Lord
 		if(id == CardIdentifier.SHURA_STEALTH_DRAGON__KUJIKIRICONGO 
+		   || id == CardIdentifier.MACHINING_SPARK_HERCULES
 		   || id == CardIdentifier.STRONGEST_BEAST_DEITY__ETHICS_BUSTER_EXTREME 
 		   || id == CardIdentifier.DEADLIEST_BEAST_DEITY__ETHICS_BUSTER______REVERSE_____ 
 		   || id == CardIdentifier.DARK_DIMENSIONAL_ROBO_______REVERSE______DAIYUSHA
