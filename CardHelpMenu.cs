@@ -118,6 +118,13 @@ public class CardHelpMenu : MonoBehaviour {
 					"[ACT](VC):[Soul Blast (1)-card with \"Machining\" in its card name] [Rest] all of your opponent's rear-guards, and this unit gets [Power]+2000 until end of turn.\n\n" +
 					"[CONT](VC/RC): Lord (If you have a unit without a same clan as this unit, this unit cannot attack)";
 		}
+		else if(id == CardIdentifier.UNRIVALED_BLADE_ROGUE_CYCLOMATOOTH)
+		{
+			desc += "[AUTO] Limit Break 4 (This ability is active if you have four or more damage):When a \"Megacolony\" rides this unit, choose your vanguard, that unit gets [Power]+10000 until" + 
+				    " end of turn, and [Rest] all of your opponent's units, and all of your opponent's units cannot [Stand] during your opponent's next stand phase.\n\n" + 
+					"[CONT](VC):During your turn, if all of your opponent's vanguard and rear-guards are [Rest], this unit gets [Power]+2000.\n\n" + 
+					"[CONT](VC/RC): Lord (If you have a unit without a same clan as this unit, this unit cannot attack)";
+		}
 		else if(id == CardIdentifier.BLUE_STORM_GUARDIAN_DRAGON_ICEFALL_DRAGON)
 		{
 			desc += "[CONT]: Sentinel (You may only have up to four cards with \"[CONT]: Sentinel\" in a deck)\n\n" + 

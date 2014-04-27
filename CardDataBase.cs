@@ -22468,6 +22468,19 @@ CardIdentifier.HOLLOW_TWIN_BLADES__BINARY_STAR
 		                              "Megacolony041",
 		                              CardIdentifier.MACHINING_SPARK_HERCULES
 		                              ));
+									  
+		Card.Add (new CardInformation(3,
+		                              TriggerIcon.NONE,
+		                              SkillIcon.TWIN_DRIVE,
+		                              0,
+		                              "Unrivaled Blade Rogue, Cyclomatooth",
+		                              "Insect",
+		                              "Megacolony",
+		                              1,
+		                              11000,
+		                              "Megacolony042",
+		                              CardIdentifier.UNRIVALED_BLADE_ROGUE_CYCLOMATOOTH
+		                              ));
 	}
 	
 	
@@ -22512,7 +22525,8 @@ private void AddSpecialConditions (Card _card, CardIdentifier id)
 		   || id == CardIdentifier.STARVADER_REVERSE_CRADLE
 		   || id == CardIdentifier.SILVER_THORN_DRAGON_EMPRESS_VENUS_LUQUIER
 		   || id == CardIdentifier.BLUE_STORM_KARMA_DRAGON_MAELSTROM_REVERSE
-		   || id == CardIdentifier.LIBERATOR_HOLY_SHINE_DRAGON)
+		   || id == CardIdentifier.LIBERATOR_HOLY_SHINE_DRAGON
+		   || id == CardIdentifier.UNRIVALED_BLADE_ROGUE_CYCLOMATOOTH)
 		{
 			_card.bHasLimitBreak4 = true;
 		}
@@ -22551,7 +22565,8 @@ private void AddSpecialConditions (Card _card, CardIdentifier id)
 		   || id == CardIdentifier.STARVADER_REVERSE_CRADLE
 		   || id == CardIdentifier.SILVER_THORN_DRAGON_EMPRESS_VENUS_LUQUIER
 		   || id == CardIdentifier.BLUE_STORM_KARMA_DRAGON_MAELSTROM_REVERSE
-		   || id == CardIdentifier.LIBERATOR_HOLY_SHINE_DRAGON)
+		   || id == CardIdentifier.LIBERATOR_HOLY_SHINE_DRAGON
+		   || id == CardIdentifier.UNRIVALED_BLADE_ROGUE_CYCLOMATOOTH)
 		{
 			_card.bLord = true;
 		}
