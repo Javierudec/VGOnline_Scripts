@@ -125,6 +125,13 @@ public class CardHelpMenu : MonoBehaviour {
 					"[CONT](VC):During your turn, if all of your opponent's vanguard and rear-guards are [Rest], this unit gets [Power]+2000.\n\n" + 
 					"[CONT](VC/RC): Lord (If you have a unit without a same clan as this unit, this unit cannot attack)";
 		}
+		else if(id == CardIdentifier.MACHINING_LADYBUG)
+		{
+			desc += "[CONT]: Sentinel (You may only have up to four cards with \"[CONT]: Sentinel\" in a deck)\n\n" + 
+				    "[AUTO]:[Counter Blast (1)] When this is placed on (GC) from your hand, if you have a \"Megacolony\"" + 
+					" vanguard, you may pay the cost. If you do, reveal the five cards from the top of your deck, call all \"Megacolony\"" + 
+					" from among them to (GC) as [Rest], and put the rest into the drop zone.";
+		}
 		else if(id == CardIdentifier.BLUE_STORM_GUARDIAN_DRAGON_ICEFALL_DRAGON)
 		{
 			desc += "[CONT]: Sentinel (You may only have up to four cards with \"[CONT]: Sentinel\" in a deck)\n\n" + 

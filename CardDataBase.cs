@@ -22481,6 +22481,19 @@ CardIdentifier.HOLLOW_TWIN_BLADES__BINARY_STAR
 		                              "Megacolony042",
 		                              CardIdentifier.UNRIVALED_BLADE_ROGUE_CYCLOMATOOTH
 		                              ));
+									  
+		Card.Add (new CardInformation(1,
+		                              TriggerIcon.NONE,
+		                              SkillIcon.BOOST,
+		                              0,
+		                              "Machining Ladybug",
+		                              "Insect",
+		                              "Megacolony",
+		                              1,
+		                              6000,
+		                              "Megacolony043",
+		                              CardIdentifier.MACHINING_LADYBUG
+		                              ));
 	}
 	
 	
@@ -22581,7 +22594,8 @@ private void AddSpecialConditions (Card _card, CardIdentifier id)
 		   || id == CardIdentifier.SILVER_COLLAR_SNOWSTORM__SASAME
 		   || id == CardIdentifier.RED_ROSE_MUSKETEER__ANTONIO
 		   || id == CardIdentifier.HATRED_PRISON_REVENGER_KUESARU
-		   || id == CardIdentifier.DRAGON_KNIGHT_GIMEL)
+		   || id == CardIdentifier.DRAGON_KNIGHT_GIMEL
+		   || id == CardIdentifier.MACHINING_LADYBUG)
 		{
 			_card.bSentinel = true;
 		}
