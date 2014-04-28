@@ -18,6 +18,8 @@ public enum OPPWINDOW
 }
 
 public class Gameplay : MonoBehaviour {
+	public static Gameplay gameplay = null;
+
 	public GUIStyle yesButtonStyle, noButtonStyle;
 
 	public bool bCheckAutoMode = false;
@@ -267,6 +269,31 @@ public class Gameplay : MonoBehaviour {
 
 	bool bConfirmEndTurn = false;
 
+	public CardDataBase getDB()
+	{
+		return Data;
+	}
+
+	public EnemyField getEnemyField()
+	{
+		return enemyField;
+	}
+
+	public UnitObject getDummyUO()
+	{
+		return dummyUnitObject;
+	}
+
+	public Field getField()
+	{
+		return field;
+	}
+
+	public void SetCentralMessage(string str)
+	{
+		stateDynamicText.SetText(str);
+	}
+
 	#region Multiplayer Options
 	[RPC]
 	void SendInformationToOpponent_Server(int cardID, int gameAction, int other1, int other2, string str1, int other3, NetworkPlayer player)
@@ -279,37 +306,10 @@ public class Gameplay : MonoBehaviour {
 	{
 		CardIdentifier _cardID = (CardIdentifier)cardID;
 		GameAction _gameAction = (GameAction)gameAction;
-		
-		if(_gameAction == GameAction.PLACE_INITIAL_VANGUARD)
-		{
-			//Remove a card from the deck an put it on the vanguard circle.
-			Card tempCard = enemyDeck.DrawCard();
-			Data.FillCardWithData(tempCard, _cardID);
-			enemyField.Ride(tempCard);
-			tempCard.TurnDown();
-		}
-		else if(_gameAction == GameAction.FROM_SOUL_TO_DECK)
-		{
-			Card tmpCard = enemyField.GetCardFromSoulByID(_cardID);
-			enemyField.RemoveFromSoul(tmpCard);
-			enemyDeck.AddCard(tmpCard);
-		}
-		else if(_gameAction == GameAction.FROM_SOUL_TO_HAND)
-		{
-			Card tmp = enemyField.GetCardFromSoulByID(_cardID);
-			enemyField.RemoveFromSoul(tmp);
-			enemyField.Ride(tmp);
-		}
-		else if(_gameAction == GameAction.DYNAMICTEXT_GAMEPHASE)
-		{
-			stateDynamicText.SetText(str1);
-		}
-		else if(_gameAction == GameAction.ENEMY_REST)
-		{
-			Card tmp = field.GetCardAt(Util.TransformToPlayerField((fieldPositions)other1));
-			dummyUnitObject.RestUnit(tmp);
-		}
-		else if(_gameAction == GameAction.LOSE_BY_CARD_EFFECT)
+
+		DataTransferManager.getTransferManager().ExecuteDataTransfer(new DataTransfer(_cardID, _gameAction, other1, other2, other3, str1));
+
+		if(_gameAction == GameAction.LOSE_BY_CARD_EFFECT)
 		{
 			bGameEnded = true;
 			bPauseGameplay = false;
@@ -1884,10 +1884,21 @@ public class Gameplay : MonoBehaviour {
 			networkView.RPC ("ConfirmAction", opponent);	
 		}
 	}
-	
+
+	public static Gameplay getGame()
+	{
+		return gameplay;
+	}
+
+	public EnemyDeck getEnemyDeck()
+	{
+		return enemyDeck;
+	}
 	// Use this for initialization
 	void Start () 
 	{	
+		gameplay = this;
+
 		_MainCamera = (Camera)gameObject.GetComponent("Camera");
 
 		_SelectionListWindow = new SelectionListWindow(Screen.width / 2, Screen.height / 2 + 100);
