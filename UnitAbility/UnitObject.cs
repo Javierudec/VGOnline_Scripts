@@ -2459,6 +2459,16 @@ public class UnitObject {
 		_CFDAux_Int1 = v.Count;
 		CallFromDeckList.Clear();
 	}
+
+	public void CallFromDeck(Card c, fieldPositions p)
+	{
+		Game.playerDeck.RemoveFromDeck(c);
+		Game.field.Call(c, p);
+		c.CheckAbilities(CardState.CallFromDeck, c);
+		Game.field.CheckAbilitiesExcept(c.pos, CardState.CallFromDeck_NotMe, c);
+		Game.SendPacket(GameAction.PLAY_CARD_FROM_DECK, c.cardID, (int)Util.TranformToEnemyPosition(c.pos));
+		c.TurnUp();
+	}
 	
 	public void CallFromDeckUpdate(Void0ParamsDelegate func)
 	{

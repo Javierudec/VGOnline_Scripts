@@ -22507,6 +22507,19 @@ CardIdentifier.HOLLOW_TWIN_BLADES__BINARY_STAR
 		                              "ShadowPaladin096",
 		                              CardIdentifier.SHARP_FANG_WITCH_FODLA
 		                              ));
+									  
+		Card.Add (new CardInformation(2,
+		                              TriggerIcon.NONE,
+		                              SkillIcon.INTERCEPT,
+		                              5000,
+		                              "Wily Revenger, Mana",
+		                              "Elf",
+		                              "Shadow Paladin",
+		                              1,
+		                              8000,
+		                              "ShadowPaladin097",
+		                              CardIdentifier.WILY_REVENGER_MANA
+		                              ));
 	}
 	
 	
