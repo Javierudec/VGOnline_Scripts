@@ -116,10 +116,18 @@ public class FieldWatcher {
 		{
 			Card c = cList[i];
 
+			Debug.Log(c.name);
+
 			if(!filterMethod(c))
 			{
+				Debug.Log(c.name  + " was removed. (Grade " + c.grade + ")");
 				cList.RemoveAt(i);
 				gList.RemoveAt(i);
+				i--;
+			}
+			else
+			{
+				Debug.Log(c.name  + " was NOT removed. (Grade " + c.grade + ")");
 			}
 		}
 	}

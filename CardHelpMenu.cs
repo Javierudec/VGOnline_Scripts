@@ -125,6 +125,11 @@ public class CardHelpMenu : MonoBehaviour {
 					"[CONT](VC):During your turn, if all of your opponent's vanguard and rear-guards are [Rest], this unit gets [Power]+2000.\n\n" + 
 					"[CONT](VC/RC): Lord (If you have a unit without a same clan as this unit, this unit cannot attack)";
 		}
+		else if(id == CardIdentifier.SHARP_FANG_WITCH_FODLA)
+		{
+			desc += "[AUTO]:[Counter Blast (1)] When this unit is placed on (VC) or (RC), if you have a \"Shadow Paladin\" vanguard, you may pay the cost. If you do, search your deck for up to two grade 0" + 
+				    " \"Shadow Paladin\", call them to separate (RC), and shuffle your deck.";
+		}
 		else if(id == CardIdentifier.MACHINING_LADYBUG)
 		{
 			desc += "[CONT]: Sentinel (You may only have up to four cards with \"[CONT]: Sentinel\" in a deck)\n\n" + 

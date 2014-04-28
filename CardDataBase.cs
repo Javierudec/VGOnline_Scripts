@@ -22494,6 +22494,19 @@ CardIdentifier.HOLLOW_TWIN_BLADES__BINARY_STAR
 		                              "Megacolony043",
 		                              CardIdentifier.MACHINING_LADYBUG
 		                              ));
+									  
+		Card.Add (new CardInformation(3,
+		                              TriggerIcon.NONE,
+		                              SkillIcon.TWIN_DRIVE,
+		                              0,
+		                              "Sharp Fang Witch, Fodla",
+		                              "Elf",
+		                              "Shadow Paladin",
+		                              1,
+		                              9000,
+		                              "ShadowPaladin096",
+		                              CardIdentifier.SHARP_FANG_WITCH_FODLA
+		                              ));
 	}
 	
 	
