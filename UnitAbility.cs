@@ -178,6 +178,7 @@ public class UnitAbility {
 	public void SetUnitObject(CardIdentifier id)
 	{
 		if(id == CardIdentifier.MARTIAL_ARTS_MUTANT__MASTER_BEETLE)  	   		 	        _UnitObject = new MartialArtsMutanMasterBeetle();
+		else if(id == CardIdentifier.JUDGEBAU_REVENGER)                                     _UnitObject = new JudgebauRevenger();
 		else if(id == CardIdentifier.WILY_REVENGER_MANA)                                    _UnitObject = new WilyRevengerMana();
 		else if(id == CardIdentifier.SHARP_FANG_WITCH_FODLA)                                _UnitObject = new SharpFangWitchFodla();
 		else if(id == CardIdentifier.UNRIVALED_BLADE_ROGUE_CYCLOMATOOTH)                    _UnitObject = new UnrivaledBladeRogueCyclomatooth();

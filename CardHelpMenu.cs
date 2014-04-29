@@ -150,6 +150,13 @@ public class CardHelpMenu : MonoBehaviour {
 				    "When this unit is placed on (RC), if you have a \"Gold Paladin\" vanguard, you may pay the cost. If you do, shuffle your " + 
 					"deck, look at the top card of your deck, search for up to one \"Gold Paladin\", call it to an open (RC), and put the rest on the bottom of your deck.";
 		}
+		else if(id == CardIdentifier.JUDGEBAU_REVENGER)
+		{
+			desc += "[AUTO]: Forerunner (When a unit of the same clan rides this unit, you may call this unit to (RC))\n\n" + 
+					"[AUTO](RC):[Counter Blast (1) and Put this unit into your soul] When an attack hits during the battle that this unit boosted your unit " + 
+					"with \"Phantom\" in its card name, you may pay the cost. If you do, search your deck for up to two grade 1 or less \"Shadow Paladin\", call " + 
+					"them to separate (RC) as [Rest], and shuffle your deck.";
+		}
 		else if(id == CardIdentifier.WILY_REVENGER_MANA)
 		{
 			desc += "[AUTO]:When this unit is placed on (VC) or (RC), if you have a \"Shadow Paladin\" vanguard, search your deck for up to one grade 1 or less card with" + 

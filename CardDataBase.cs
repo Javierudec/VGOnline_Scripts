@@ -22520,6 +22520,19 @@ CardIdentifier.HOLLOW_TWIN_BLADES__BINARY_STAR
 		                              "ShadowPaladin097",
 		                              CardIdentifier.WILY_REVENGER_MANA
 		                              ));
+									  
+		Card.Add (new CardInformation(0,
+		                              TriggerIcon.NONE,
+		                              SkillIcon.BOOST,
+		                              10000,
+		                              "Judgebau Revenger",
+		                              "High Beast",
+		                              "Shadow Paladin",
+		                              1,
+		                              5000,
+		                              "ShadowPaladin098",
+		                              CardIdentifier.JUDGEBAU_REVENGER
+		                              ));
 	}
 	
 	

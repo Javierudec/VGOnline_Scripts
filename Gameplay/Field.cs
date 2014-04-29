@@ -400,7 +400,16 @@ public class Field {
 		for(int i = 0; i < Soul.Count; i++)
 		{
 			//Soul[i].GetGameObject().transform.position = fieldInfo.GetPosition((int)fieldPositions.VANGUARD_CIRCLE) + delta * i;	
-			Soul[i].MoveAndRotate(fieldInfo.GetPosition((int)fieldPositions.VANGUARD_CIRCLE) + delta * i, fieldInfo.GetCardRotation());
+
+			//Soul[i].MoveAndRotate(fieldInfo.GetPosition((int)fieldPositions.VANGUARD_CIRCLE) + delta * i, Soul[i].GetGameObject().r);
+			if(i == (Soul.Count - 1) && !Soul[i].IsStand())
+			{
+				Soul[i].MoveAndRotate(fieldInfo.GetPosition((int)fieldPositions.VANGUARD_CIRCLE) + delta * i, new Vector3(Soul[i].GetGameObject().transform.eulerAngles.x, 90, Soul[i].GetGameObject().transform.eulerAngles.z));
+			}
+			else
+			{
+				Soul[i].MoveAndRotate(fieldInfo.GetPosition((int)fieldPositions.VANGUARD_CIRCLE) + delta * i, fieldInfo.GetCardRotation());
+			}
 		}
 	}
 	

@@ -2460,6 +2460,14 @@ public class UnitObject {
 		CallFromDeckList.Clear();
 	}
 
+	public void CallFromDeck(Card c) {
+		_CFDAux_IDVector = new List<CardIdentifier>();
+		_CFDAux_IDVector.Add(c.cardID);
+		_CFDAux_Bool1 = true;
+		_CFDAux_Int1 = _CFDAux_IDVector.Count;
+		CallFromDeckList.Clear();
+	}
+
 	public void CallFromDeck(Card c, fieldPositions p)
 	{
 		Game.playerDeck.RemoveFromDeck(c);
